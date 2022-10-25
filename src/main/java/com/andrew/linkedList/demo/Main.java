@@ -1,4 +1,6 @@
-package com.andrew.linkedList;
+package com.andrew.linkedList.demo;
+
+import com.andrew.linkedList.demo.Customer;
 
 import java.util.ArrayList;
 

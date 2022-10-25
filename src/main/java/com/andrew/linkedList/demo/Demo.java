@@ -1,4 +1,4 @@
-package com.andrew.linkedList;
+package com.andrew.linkedList.demo;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -134,7 +134,7 @@ public class Demo {
 
     }
 
-    public static void printMenu() {
+    static void printMenu() {
         System.out.println("Available actions:\npress");
         System.out.println("0 - to quit\n" +
                                         "1 - go to next city\n" +
