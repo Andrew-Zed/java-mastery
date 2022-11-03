@@ -1,6 +1,8 @@
-package com.andrew.abstractclasses;
+package com.andrew.abstractclasses.lesson;
 
-public class Dog extends Animal{
+import com.andrew.abstractclasses.lesson.Animal;
+
+public class Dog extends Animal {
 
     public Dog(String name) {
         super(name);

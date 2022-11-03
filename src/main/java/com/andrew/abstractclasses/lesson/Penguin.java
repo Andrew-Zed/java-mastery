@@ -1,6 +1,8 @@
-package com.andrew.abstractclasses;
+package com.andrew.abstractclasses.lesson;
 
-public class Penguin extends Bird{
+import com.andrew.abstractclasses.lesson.Bird;
+
+public class Penguin extends Bird {
     public Penguin(String name) {
         super(name);
     }

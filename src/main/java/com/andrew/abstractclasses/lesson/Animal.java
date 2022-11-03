@@ -1,4 +1,4 @@
-package com.andrew.abstractclasses;
+package com.andrew.abstractclasses.lesson;
 
 public abstract class Animal {
     private String name;

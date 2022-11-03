@@ -1,4 +1,4 @@
-package com.andrew.abstractclasses;
+package com.andrew.abstractclasses.lesson;
 
 public class Main {
     public static void main(String[] args) {
