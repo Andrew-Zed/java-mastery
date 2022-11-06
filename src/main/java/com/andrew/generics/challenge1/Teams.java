@@ -1,8 +1,9 @@
-package com.andrew.generics;
+package com.andrew.generics.challenge1;
+
 
 import java.util.ArrayList;
 
-public class Team<T extends Player> implements Comparable<Team<T>> {
+public class Teams <T extends Players> implements Comparable<Teams<T>>{
     private String name;
     int played = 0;
     int won = 0;
@@ -11,7 +12,7 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
 
     private ArrayList<T> members = new ArrayList<>();
 
-    public Team(String name) {
+    public Teams(String name) {
         this.name = name;
     }
 
@@ -34,39 +35,33 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
         return this.members.size();
     }
 
-    public void matchResult(Team<T> opponent, int ourScore, int theirScore) {
 
-        String message;
+    public void matchResult(Teams<T> opponent, int ourScore, int theirScore) {
+
+        String text;
         if (ourScore > theirScore) {
             won++;
-            message = " beat ";
+            text = " beat ";
         } else if (ourScore == theirScore) {
             tied++;
-            message = " drew with ";
+            text = " drew with ";
         } else {
             lost++;
-            message = " lost to  ";
+            text = " lost to  ";
         }
         played++;
         if(opponent != null) {
-            System.out.println(this.getName() + message + opponent.getName());
+            System.out.println(this.getName() + text + opponent.getName());
             opponent.matchResult(null, theirScore, ourScore);
         }
     }
 
     public int ranking() {
-        return (won * 2) + tied ;
+        return (won * 3) + tied;
     }
 
     @Override
-    public int compareTo(Team<T> team) {
-        if(this.ranking() > team.ranking()) {
-            return -1;
-        } else if (this.ranking() < team.ranking()) {
-            return 1;
-        } else {
-            return 0;
-        }
-
+    public int compareTo(Teams teams) {
+        return Integer.compare(teams.ranking(), this.ranking());
     }
 }

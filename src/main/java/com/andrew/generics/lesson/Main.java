@@ -1,4 +1,4 @@
-package com.andrew.generics;
+package com.andrew.generics.lesson;
 
 public class Main {
     public static void main(String[] args) {

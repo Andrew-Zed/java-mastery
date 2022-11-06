@@ -1,4 +1,4 @@
-package com.andrew.generics;
+package com.andrew.generics.lesson;
 
 public class BaseballPlayer  extends Player {
 
